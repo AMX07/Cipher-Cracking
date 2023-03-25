@@ -32,7 +32,7 @@ def find_shift(ciphertext):
 
     return best_shift
 
-ciphertext = "Jgtg qh Gocrv!"
+ciphertext = "Wklv lv qrz"      #this is now
 shift = find_shift(ciphertext)
 
 plaintext = caesar_decrypt(ciphertext, shift)
