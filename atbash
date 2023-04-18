@@ -1,0 +1,15 @@
+def atbash_decrypt(ciphertext):
+    plaintext = ""
+    for char in ciphertext:
+        if char.isalpha():
+            offset = ord('A') if char.isupper() else ord('a')
+            plaintext += chr(offset + (25 - (ord(char) - offset)))
+        else:
+            plaintext += char
+
+    return plaintext
+
+
+ciphertext = "Sr R zn Zmhs NRggzo "  # Example ciphertext
+plaintext = atbash_decrypt(ciphertext)
+print("Plaintext:", plaintext)
